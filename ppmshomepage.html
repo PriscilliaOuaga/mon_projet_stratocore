@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>PPMS Interface Homepage</title>
+          <link rel="stylesheet" href="css/styles.css">
+
+      </head>
+      <body>
+        <aside class="sidebar">
+          <!--Logo et titre logiciel-->
+          <div class="logo">
+            <a href="#">
+              <img src="ressources/logo.png" alt="PPMS logo" class="logo-image">
+            </a>
+              <span class="software-title">PPMS</span>
+          </div>
+          <!-- Barre de recherche-->
+          <div class="search-container">
+              <form action="#" method="get">
+                <input type="text" placeholder="Search" name="search" class="search-input">
+                  <button type="submit" class="search-button">
+                    <img src="icons/search-icon-light.png" alt="Search Icon" class="search-icon">
+                  </button>
+              </form>
+          </div>
+          <!-- Menu lateral-->
+          <nav class="menu">
+            
+            <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Documents</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Orders</a></li>
+                  <li><a href="#">Incidences</a></li>
+                  <li><a href="#">Training</a></li>
+                  <li><a href="#">Logout</a></li>
+              </ul>
+            </nav>
+            <footer class="footer">
+              <a href="mailto:support@stratocore.com" class="contact-link">Contact us </a>
+              <div class="brand-logo">
+                <img src="ressources/logo_name.png" alt="Brand Logo" class="footer-logo">
+                </div>
+              <p class="version1">PPMS 1.0 </p>
+        </footer>
+        </aside>
+
+        <!--Contenu principal-->
+        <main class="main-content">
+          <!-- Header and Controls-->
+            <header class="main-header">
+                <h1 class="title-homepage">Welcome to <strong>PPMS</strong> homepage ! </h1>
+                <div class="header-controls">
+                  <button class="dark-mode-toggle" onclick="toggleDarkMode(this)">
+                    <img src="icons/darkmode-icon-off.png" alt="Dark mode icon" class="darkmode-icon-off"> <!--width="20" height="20"-->
+                    <span class="darkmode-text">Dark mode</span>
+                  </button>
+                  <button class="logout-button">
+                    <img src="icons/logout-icon-light.png" alt="Logout icon" class="logout-icon">
+                    <span class="logout-text">Logout</span>
+                  </button>
+                </div>
+            </header>
+
+            <!--Container 1 : My Profile section-->
+            <div class="profile-container">
+                <h2 class="profile-title">My user profile</h2>
+                <section class="profile-section">
+                  <div class="profile-pic">
+                    <img src="ressources/profesional_picture.png" alt="Profesional picture" class="profesional-picture">
+                  </div>
+                  <div class="profile-info">
+                    <span class="profile-name">
+                      John Doe
+                    </span>
+                    <div class="contact-info">
+                        <div>
+                            <img src="icons/mail_icon.png" alt="Email icon" class="icon">
+                            <strong>Email:</strong>  
+                            <div class="mail-adress">johndoe@ppms.com</div>
+                          </div>
+                          <div>
+                            <img src="icons/phone_icon.png" alt="Phone icon" class="icon">
+                            <strong>Phone:</strong>
+                            <div class="phone-number">+100000000</div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+
+              <!--Container 2 : Frequent option-->
+              <div class="frequent-container">
+                  <h2 class="frequent-option-title">Frequent options</h2>
+                  <section class="frequent-options">
+                      <!--<div class="option-grid">-->
+                          <div class="option-item">
+                            <img src="icons/document_icon.png" alt="Documents icon" class="option-icon">
+                            <span>Documents</span>
+                          </div>
+                          <div class="option-item">
+                            <img src="icons/order_icon.png" alt="Orders icon" class="option-icon">
+                            <span>Orders</span>
+                          </div>
+                          <div class="option-item">
+                            <img src="icons/project_icon.png" alt="Projects icon" class="option-icon">
+                            <span>Projects</span>
+                          </div>
+                          <div class="option-item">
+                            <img src="icons/add_icon.png" alt="Add icon" class="option-icon">
+                            <span class="add-text">Add</span>
+                          </div>
+                      <!--</div>-->
+                  </section>
+              </div>
+
+              <!-- Container 3: Widget Detailed-->
+              <div class="widget-container">
+                <h2 class="widget-option-title">Widget options</h2>
+                <div class="widget-section">
+                  <section class="project-widget">
+                      <div class="=widget-hearder">
+                        <span  class="widget-option-subtitle">My Projects</span>
+                        <div class="settings_icon">
+                            <img src="icons/settings_icon.png" alt="Settings icon">
+                        </div>
+                      </div>
+                      <div class="project-grid">
+                          <div class="project-item">
+                            <img src="icons/alone_project_icon.png" alt="Project icon" class="project-icon1">
+                            <div class="option-delaited">
+                              <span class="item-title">Project 1:</span> 
+                              <span class="item-status pending">Pending validation...</span>
+                            </div>
+                          </div>
+                          <div class="project-item">
+                              <img src="icons/alone_project_icon.png" alt="Project icon" class="project-icon1">
+                              <div class="option-delaited">
+                                <span class="item-title">Project 2:</span>
+                                <span class="item-status pending">Pending validation...</span>
+                              </div>
+                          </div>
+                          <div class="project-item">
+                              <img src="icons/alone_project_icon.png" alt="Project icon" class="project-icon1">
+                              <div class="option-delaited">
+                                <span class="item-title">Project 3:</span> 
+                                <span class="item-status available">Available !</span>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+
+                  <section class="training-widget">
+                      <div class="widget-hearder">
+                          <span class="widget-option-subtitle">My Trainings</span>
+                          <div class="settings_icon">
+                              <img src="icons/settings_icon.png" alt="Settings icon">
+                          </div>
+                      </div>
+                      <div class="training-grid">
+                          <div class="training-item">
+                              <img src="icons/training_icon.png" alt="Training icon" class="training-icon1">
+                              <div class="option-delaited">
+                                <span class="item-title">Training session 1:</span>
+                                <span class="item-status pending">Pending approval...</span>
+                              </div>
+                          </div>
+                          <div class="training-item">
+                              <img src="icons/training_icon.png" alt="Training icon" class="training-icon1">
+                              <div class="option-delaited">
+                                <span class="item-title">Training session 2:</span>
+                                <span class="item-status pending">Pending approval...</span>
+                              </div>
+                          </div>
+                          <div class="training-item">
+                            <img src="icons/training_icon.png" alt="Training icon" class="training-icon1">
+                            <div class="option-delaited">
+                              <span class="item-title">Training session 3:</span>
+                              <span class="item-status available">Available !</span>
+                            </div>
+                          </div>
+                      </div>
+                  </section>
+              </div>
+              </div>    
+          </main>
+    <script src="ui-interactions.js"></script>  
+    </body>
+  </html>

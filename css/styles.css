@@ -1,0 +1,875 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgb(233, 233, 233);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    overflow-y: auto; 
+    padding: 20px O;
+}
+
+/*Logo et titre logiciel*/
+.logo {
+    display: flex; 
+    align-items: center; 
+    padding: 20px 10px 10px 50px; 
+    text-align: right;
+}
+
+.logo-image {
+    max-width: 45px; 
+    height: auto; 
+    margin-right: 10px 0 40px;
+}
+
+/*Titre du logiciel*/
+.software-title {
+    font-size: 24px; 
+    color: black; 
+    font-weight: bold; 
+    padding-left: 15px;
+}
+
+/*Barre de recherche*/
+.search-container{
+    padding: 35px 0 5px; 
+    text-align: center;
+    margin-bottom: 5px; 
+    position: relative;
+}
+
+.search-input{
+    width: 60%; 
+    padding: 8px 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px; 
+    font-size: 14px;
+    background-color: #fff; 
+    transition: background-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none; 
+    border-color: #0073E6; 
+}
+
+.search-button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 35px; 
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 5px ;
+    margin: 17px 0 0;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+        width: 16px; 
+        height: 16px;
+}
+
+/*Darkmode !remove!*/
+body.dark-mode .search-input {
+    content: url('icons/search-icon-dark.png'); 
+    
+}
+
+
+/* search-button:hover {
+  background-color: #005BB5;
+}*/
+
+/* Menu*/
+.menu {
+    flex-grow: 1; 
+}
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: auto;
+    margin-bottom: 0px; 
+  
+}
+
+.menu li a {
+    display: block; 
+    padding: 10px;
+    width: 70%; 
+    margin: 10px auto; 
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    background-color: rgb(233, 233, 233);
+    font-weight: bold;
+    line-height: 24px;
+    transition: background-color 0.3s ease, width 0.3s ease; 
+}
+
+.menu li:last-child a {
+    color: #FF0C56;
+}
+
+.menu li a:hover {
+    border-radius: 10px; 
+    background-color: rgb(67, 91, 119);
+    color: white;
+  width: 80%; 
+} 
+
+.menu li:last-child a:hover {
+    color: #435B77;
+    background-color: white;
+    width: 80%;
+}
+
+.menu li a:hover:not(:last-child) {
+    border-radius: 10px;
+    background-color: rgb(67, 91, 119);
+    color: white;
+    width: 80%;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-weight: normal;
+    padding: 20px 0 0 0;
+    background-color: rgb(233, 233, 233);
+    color: black;
+     margin-top: auto;
+}
+/*Footer : Contact*/
+.contact-link{
+    text-decoration: none; /* Retire le soulignement du lien*/    
+    color: #435B77;
+    font-weight: bold; /*Renforce le gras du texte*/
+    margin-bottom: 5px; /*Léger espacement sous le lien*/
+}
+/*Footer : Logo*/
+.footer-logo{
+  max-width: 60px; /*Ajuster cette valeur selon la taille souhaitée du logo*/
+  margin: 10px 0 0; /*Espace entre le logo et le lien "Contact us"*/
+}
+
+.brand-name{
+  display: block; /*Ajuster cette valeur selon la taille souhaitée du logo*/
+  font-size: 14px; /*Ajuster la taille du texte */
+  margin: 5px 0;
+}
+/*Footer : Version1.0*/
+.version1 {
+    margin-top: 5px;
+    font-size: 0.7em;
+}
+
+/*Styled pour les tablettes */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /*Adaptation de la largeur de la barre latéral*/
+    }
+    .logo-image, .footer-logo {
+        max-width: 35px; /*Adaptation de la taille des logos*/
+    }
+    .menu li a {
+        padding: 8px;
+        font-size: 0.9em; /*Réduction de la taille de la police*/
+    }
+}
+
+
+/*Styles pour les mobiles*/
+@media (max-width: 480px) {
+.sidebar {
+    width: 100%;
+    position: static;
+    padding: 10px 0;
+}
+.search-input {
+    width: 90%;
+}
+
+.menu {
+    flex-direction: column;
+}
+.menu li a {
+    width: 100%;
+}
+}
+
+
+
+
+/* BODY : Main content*/
+.main-content {
+    margin: 0 100px 50px 360px; /*Compense pour la sidebar*/
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+/* Accroche sentence*/
+h1.title-homepage {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+/*Main Title page */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px 40px 10px 40px;
+    border-bottom: 2px solid #ccc;
+}
+/*Boutons de controle dark-mo et logout*/
+.header-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*Darkmode toggle*/
+.dark-mode-toggle {
+    padding: 8px;
+    margin-left: 8px;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+/*Logout button*/
+.logout-button {
+    padding: 8px;
+    margin-left: 8px;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logout-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px; /*Ajout espace entre le texte et l'icone*/
+}
+/*Logout text*/
+.logout-text {
+    margin-left: 5px;
+    color: #FF0C56;
+    text-decoration: none;
+    font-weight: normal;
+}
+/*Dark mode text*/
+.darkmode-icon-off {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px; /*Ajout espace entre le texte et l'icone*/
+}
+
+.darkmode-text {
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;  
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .dark-mode-toggle,
+body.dark-mode .logout-button {
+    background-color: #555;
+    border-color: #777;
+}
+
+body.dark-mode .darkmode-icon,
+body.dark-mode /.logout-icon {
+    filter: invert(1);
+}
+
+/*Responsive settings*/
+/*Tablette ( 768px to 1024px)*/
+@media (min-width: 768px) and (max-width: 1024px){
+    h1.title-homepage {
+        font-size: 1.5rem;
+    }
+
+    .main-header {
+        padding: 15px 30px 10px 30px;
+    }
+
+    .header-controls {
+        justify-content: space-between;
+    }
+
+    .dark-mode-toggle .darkmode-text,
+    .logout-button .logout-text {
+        display: none;
+    }
+
+    .darkmode-icon-off, .logout-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+/*Little Desktops (1024px to 1366px)*/
+@media (min-width: 1024px) and (max-windth: 1366px) {
+    h1.title-homepage {
+        font-size: 1.75rem;
+    }
+
+    .main-header {
+        padding: 18px 35px 10px 35px;
+    }
+
+    .dark-mode-toggle .darkmode-text,
+    .logout-button .logout-text {
+        font-size: 0.9rem;
+    }
+
+    .darkmode-icon-off, .logout-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+/*Huge Desktop (1366 and more)*/
+@media (min-width: 1366px) {
+    h1.title-homepage {
+        font-size: 2rem;
+    }
+
+    .main-header {
+        padding: 20px 40px 10px 40px;
+    }
+
+    .darkmode-icon-off, .logout-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .dark-mode-toggle .darkmode-text,
+    .logout-button .logout-text {
+        font-size: 1rem;
+    }
+}
+
+
+/*Container 1 : My Profile*/
+.profile-container {
+    background-color: none;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.profile-section { 
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 20px 10px  ;
+    border: 1px solid #f4f4f4;
+}
+
+h2.profile-title { /*À modifer avec wireframe fimga */
+    text-align: center;
+    border: 1px solid #f4f4f4;
+    font-weight:700;
+    border-radius: 8px;
+    padding: 5px 7px 5px 7px;
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: #19B6EF;
+
+}
+
+
+.profile-pic {
+    width: 175px;
+    height: 175px;
+    margin-right: 50px;
+}
+
+
+.profile-info {
+   text-align: left;
+}
+
+.profile-name {
+    font-size: 40px;
+    font-weight: bold;
+    color: #CA2154;
+    margin-bottom: 30px;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.mail-adress {
+    color: #000000;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.phone-number{
+    color: #000000;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.contact-info .icon {
+    margin-right: 12px;
+    width: 15px;
+    height: 13px;
+}
+
+/*Responsive settings: My user profile*/
+/*Tablette ( 768px to 1024px)*/
+@media (min-width:768px) and (max-width: 1024px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-name {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info div {
+        font-size: 14px;
+    }
+
+    .contact-info .icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/*Little Desktops (1024px to 1366px)*/
+@media (min-width: 1024px) and (max-width: 135px) {
+    .profile-container {
+        width: 80%;
+    }
+
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-name {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .contact-info div {
+        font-size: 15px;
+    }
+
+    .contact-info .icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/*Huge Desktop (1366 and more)*/
+@media (min-width: 1366px) {
+    .profile-container {
+        width: 70%;
+    }
+    
+    .profile-pic {
+        width: 175px;
+        height: 175px;
+    }
+
+    .profile-name {
+        font-size: 40px;
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .contact-info .icon {
+        width: 15px;
+        height: 13px;
+    }
+}
+
+/* Container 2 : FREQUENT OPTIONS*/
+.frequent-container {
+    background-color: #f4f4f4;
+    border-top: 1px solid #CCCCCC;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.frequent-option-title {
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #435B77;
+
+}
+.frequent-options {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background-color: #f4f4f4;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.option-item {
+    background-color: #ffff;
+    padding: 20px 20px 20px 20px;
+    margin: O;
+    border: 1px solid #E9E9E9;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0072E5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: #435B77;
+}
+
+.option-item img {
+    margin-bottom: 15px;
+    width: 76px;
+    height: 80px;
+}
+
+
+/*Responsive settings: Frequent widget*/
+/*Tablette ( 768px to 1024px)*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .frequent-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .option-item {
+        width: 60%;
+    }
+
+    .option-item img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/*Little Desktops (1024px to 1366px)*/
+@media (min-width:1024px) and (max-width: 1399px) {
+    .frequent-options {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .option-item {
+        width: auto;
+    }
+
+    .option-item img {
+        width: 76px;
+        height: 80px;
+    }
+}
+
+
+/*Huge Desktop (1366 and more)*/
+@media (min-width:1366px) {
+    .frequent-options {
+        flex-direction: row;
+        gap: 25px;
+    }
+    
+    .option-item {
+        width: auto;
+    }
+
+    .option-item img {
+        width: 76px;
+        height: 80px;
+    }
+}
+
+/* Container 3: Widget Detailed*/
+.widget-container {
+    background-color: #f4f4f4;
+    border:none;
+    border-top: 1px solid #CCCCCC;
+    font-weight: normal;
+}
+
+/*Section title -widget*/
+h2.widget-option-title{
+font-weight: normal;
+color: #435B77;
+text-align: center;
+}
+
+/*Widget section*/
+.widget-section {
+    background-color: #ffff;
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+    padding: 20px;
+    margin: none;
+}
+
+.widget-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.widget-option-subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0072E5;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 20px;
+}
+
+
+.settings-icon img {
+    padding-left: 15px;
+    width: 3px;
+    height: 5px;
+}
+
+.project-grid, .training-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    gap: 35px;
+}
+
+.project-item, .training-item {
+    background-color: #ffff;
+    border: 2px solid #0072E5;
+    padding: 15px 12px 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.option-delaited {
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.project-icon1 {
+    margin: 0 15px 0 5px;
+    width: 40px;
+    height: 40px;  
+}
+
+.training-icon1 {
+    margin: 0 10px 0 5px;
+    width: 65px;
+    height: 65px;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #435B77;
+    text-decoration: underline;
+}
+
+.item-status {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.item-status.pending {
+    color: #131313ee;
+    font-style: italic;
+}
+
+.item-status.available {
+    color: #CA2154;
+}
+
+
+/*Responsive settings: Frequent widget*/
+/*Tablette ( 768px to 1024px)*/
+/*
+@media (min-windth: 768px) and (max-width: 1024px) {
+    .widget-container {
+        padding: 15px;
+    }
+
+    .project-grid, .training-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .widget-section {
+        margin-bottom: 20px;
+    }
+
+    .project-item, .training-item {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .project-icon1, .training-icon1 {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .item-title {
+        font-size: 16px;
+    }
+
+    .item-status {
+        font-size: 14px;
+    }
+}
+*/
+
+/*Little Desktops (1024px to 1366px)*/
+/*
+@media (min-width: 1024px) and (max-width: 1366) {
+    .project-grid, .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .project-item, .training-item {
+        flex-direction: row;
+        text-align: center;
+        padding: 12px 10px;
+    }
+
+    .project-icon1, .training-icon1 {
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .item-title {
+        font-size: 18px;
+    }
+
+    .item-status {
+        font-size: 14px;
+    }
+}
+*/
+
+/*Huge Desktop (1366 and more)*/
+/*
+@media (min-width: 1400px) {
+    .project-grid, .training-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    .project-item, .training-item {
+        flex-direction: row;
+        text-align: center;
+        padding: 15px 12px;
+    }
+
+    .project-icon1, .training-icon1 {
+        margin-right: 15px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .item-title {
+        font-size: 20px;
+    }
+
+    .item-status {
+        font-size: 16px;
+    }
+} 
+*/
