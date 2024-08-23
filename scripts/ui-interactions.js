@@ -1,20 +1,20 @@
-'console.log'("Script Loaded");
+console.log("Script Loaded");
 
 function toggleDarkMode (button) {
     const body = document.body;
-    const darkModeIcon = document.querySelector('darkmode-icon');
-    const logoutIcon = document.querySelector('.logout-icon'); //Référence à l'icône logout//
+    const darkModeIcon = document.querySelector('.darkmode-icon-off');
+    const logoutIcon = document.querySelector('.logout-icon'); 
 
 
     if  (body.classList.contains('dark-mode')) {
-          body.classList.remove('darkmode');
-          darkModeIcon.src = 'icons/darkmode-icon-off.png'; //Chemin vers l'icône pour le Dark Mode désactivé
+          body.classList.remove('dark-mode');
+          darkModeIcon.src = 'icons/darkmode-icon-off.png';
           darkModeIcon.alt = 'Dark mode icon';
-          logoutIcon.src = 'icons/logout-icon-light.png'; //Chemin vers le l'icône logout normal//
+          logoutIcon.src = 'icons/logout-icon-light.png';
   } else {
           body.classList.add('dark-mode');
-          darkModeIcon.src = 'icons/darkmode-icon-on.png'; //Chemin vers l'icône darkmode activé//
+          darkModeIcon.src = 'icons/darkmode-icon-on.png';
           darkModeIcon.alt = 'Light mode icon';
-          logoutIcon.src = 'icons/logout-icon-dark.png'; //Chemin vers l'icône de logout en mode sombre//
+          logoutIcon.src = 'icons/logout-icon-dark.png';
   }
 }

@@ -5,6 +5,13 @@ body {
     background-color: #f4f4f4;
 }
 
+/*Darkmode body*/
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+
 .sidebar {
     width: 250px;
     background-color: rgb(233, 233, 233);
@@ -17,6 +24,12 @@ body {
     padding: 20px O;
 }
 
+/*Darkmode sidebar*/
+body.dark-mode .sidebar {
+    background-color: #444;
+}
+
+
 /*Logo et titre logiciel*/
 .logo {
     display: flex; 
@@ -24,6 +37,12 @@ body {
     padding: 20px 10px 10px 50px; 
     text-align: right;
 }
+
+/*Darkmode titre du logiel*/
+body.dark-mode .software-title {
+    color: #fff;
+}
+
 
 .logo-image {
     max-width: 45px; 
@@ -39,7 +58,7 @@ body {
     padding-left: 15px;
 }
 
-/*Barre de recherche*/
+/* Barre de recherche*/
 .search-container{
     padding: 35px 0 5px; 
     text-align: center;
@@ -81,10 +100,24 @@ body {
         height: 16px;
 }
 
-/*Darkmode !remove!*/
+body.dark-mode .search-input {
+    background-color: #666;
+    border-color: #777;
+    color: white;
+}
+
+/*Darkmode button*/
 body.dark-mode .search-input {
     content: url('icons/search-icon-dark.png'); 
     
+}
+
+body.dark-mode .search-input::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode .search-button {
+    background-color: #666;
 }
 
 
@@ -123,8 +156,17 @@ body.dark-mode .search-input {
     transition: background-color 0.3s ease, width 0.3s ease; 
 }
 
+body.dark-mode .menu li a {
+    background-color: #444;
+    color: white;
+}
+
 .menu li:last-child a {
     color: #FF0C56;
+}
+
+body.dark-mode /menu li:last-child a {
+    color: #ff7373;
 }
 
 .menu li a:hover {
@@ -134,10 +176,21 @@ body.dark-mode .search-input {
   width: 80%; 
 } 
 
+body.dark-mode .menu li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
 .menu li:last-child a:hover {
     color: #435B77;
     background-color: white;
     width: 80%;
+}
+
+body.dark-mode .menu li:last-child a:hover {
+    color: #ffd3e0;
+    background-color: #555;
 }
 
 .menu li a:hover:not(:last-child) {
@@ -157,22 +210,35 @@ body.dark-mode .search-input {
     color: black;
      margin-top: auto;
 }
+
+/*Darkmode Footer*/
+body.dark-mode .footer {
+    background-color: #444;
+    color: white;
+}
+
 /*Footer : Contact*/
 .contact-link{
-    text-decoration: none; /* Retire le soulignement du lien*/    
+    text-decoration: none;   
     color: #435B77;
-    font-weight: bold; /*Renforce le gras du texte*/
-    margin-bottom: 5px; /*Léger espacement sous le lien*/
+    font-weight: bold; 
+    margin-bottom: 5px; 
 }
+
+/*Darkmode contact link*/
+body.dark-mode .contact-link {
+    color: #88c0d0;
+}
+
 /*Footer : Logo*/
 .footer-logo{
-  max-width: 60px; /*Ajuster cette valeur selon la taille souhaitée du logo*/
-  margin: 10px 0 0; /*Espace entre le logo et le lien "Contact us"*/
+  max-width: 60px; 
+  margin: 10px 0 0; 
 }
 
 .brand-name{
-  display: block; /*Ajuster cette valeur selon la taille souhaitée du logo*/
-  font-size: 14px; /*Ajuster la taille du texte */
+  display: block; 
+  font-size: 14px; 
   margin: 5px 0;
 }
 /*Footer : Version1.0*/
@@ -185,14 +251,14 @@ body.dark-mode .search-input {
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 200px; /*Adaptation de la largeur de la barre latéral*/
+        width: 200px; 
     }
     .logo-image, .footer-logo {
-        max-width: 35px; /*Adaptation de la taille des logos*/
+        max-width: 35px; 
     }
     .menu li a {
         padding: 8px;
-        font-size: 0.9em; /*Réduction de la taille de la police*/
+        font-size: 0.9em; 
     }
 }
 
@@ -221,10 +287,16 @@ body.dark-mode .search-input {
 
 /* BODY : Main content*/
 .main-content {
-    margin: 0 100px 50px 360px; /*Compense pour la sidebar*/
+    margin: 0 100px 50px 360px; 
     padding: 20px;
     background-color: #f4f4f4;
 }
+ 
+body.dark-mode .main-content {
+    background-color: #222;
+    border-color: #444;
+}
+
 /* Accroche sentence*/
 h1.title-homepage {
     text-align: center;
@@ -242,13 +314,27 @@ h1.title-homepage {
     padding-bottom: 20px 40px 10px 40px;
     border-bottom: 2px solid #ccc;
 }
-/*Boutons de controle dark-mo et logout*/
+
+/* Darkmode pour main-header */
+body.dark-mode .main-header {
+    background-color: #222;
+    border-color: #444;
+}
+
+/*Boutons de controle dark-mode et logout*/
 .header-controls {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* Darkmode pour header-controls */
+body.dark-mode .header-controls {
+    background-color: #222;
+}
+
+
 /*Darkmode toggle*/
 .dark-mode-toggle {
     padding: 8px;
@@ -260,6 +346,9 @@ h1.title-homepage {
     display: flex;
     align-items: center;
 }
+
+
+
 /*Logout button*/
 .logout-button {
     padding: 8px;
@@ -275,7 +364,7 @@ h1.title-homepage {
 .logout-icon {
     width: 14px;
     height: 14px;
-    margin-left: 5px; /*Ajout espace entre le texte et l'icone*/
+    margin-left: 5px; 
 }
 /*Logout text*/
 .logout-text {
@@ -288,7 +377,7 @@ h1.title-homepage {
 .darkmode-icon-off {
     width: 14px;
     height: 14px;
-    margin-left: 5px; /*Ajout espace entre le texte et l'icone*/
+    margin-left: 5px; 
 }
 
 .darkmode-text {
@@ -298,14 +387,14 @@ h1.title-homepage {
     font-weight: normal;  
 }
 
-body.dark-mode {
+/*body.dark-mode {
     background-color: #333;
     color: white;
-}
+}*/
 
 body.dark-mode .dark-mode-toggle,
 body.dark-mode .logout-button {
-    background-color: #555;
+    background-color: white;
     border-color: #777;
 }
 
@@ -383,14 +472,19 @@ body.dark-mode /.logout-icon {
 
 /*Container 1 : My Profile*/
 .profile-container {
-    background-color: none;
+    background-color: #F4F4F4;
     padding: 20px;
     margin: 20px 0;
     text-align: left;
     width: 80%;
     margin: 0 auto;
+
 }
 
+/* Darkmode pour profile-container */
+body.dark-mode .profile-container {
+    background-color: #222;
+}
 
 .profile-section { 
     display: flex;
@@ -403,6 +497,15 @@ body.dark-mode /.logout-icon {
     border: 1px solid #f4f4f4;
 }
 
+/*Darkmode profile section*/
+body.dark-mode .profile-section {
+    /*background-color: #fff;*/
+    border-color: #444;
+    color: black;
+
+}
+
+
 h2.profile-title { /*À modifer avec wireframe fimga */
     text-align: center;
     border: 1px solid #f4f4f4;
@@ -413,6 +516,12 @@ h2.profile-title { /*À modifer avec wireframe fimga */
     font-size: 40px;
     color: #19B6EF;
 
+}
+
+/* Darkmode pour profile-title */
+body.dark-mode h2.profile-title {
+    color: white;
+    border: none;
 }
 
 
@@ -559,12 +668,26 @@ h2.profile-title { /*À modifer avec wireframe fimga */
     text-align: center;
 }
 
+/* Darkmode pour frequent-container */
+body.dark-mode .frequent-container {
+    background-color: #222;
+    border-top: 1px solid #333;
+}
+
+
 .frequent-option-title {
     margin-bottom: 5px;
     font-weight: normal;
     color: #435B77;
 
 }
+
+/* Darkmode pour frequent-option-title */
+body.dark-mode .frequent-option-title {
+    color: white;
+}
+
+
 .frequent-options {
     display: flex;
     /*flex-direction: row;*/
@@ -575,6 +698,11 @@ h2.profile-title { /*À modifer avec wireframe fimga */
     padding: 20px 10px 20px 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+/*Darkmode frequent options*/
+body.dark-mode .frequent-options {
+    background-color: #fff;
 }
 
 .option-item {
@@ -593,6 +721,12 @@ h2.profile-title { /*À modifer avec wireframe fimga */
     align-items: center;
     cursor: pointer;
 }
+
+body.dark-mode .option-item {
+    background-color: #fff;
+    color: black;
+}
+
 
 .add-text {
     font-weight: bold;
@@ -669,12 +803,20 @@ h2.profile-title { /*À modifer avec wireframe fimga */
     border-top: 1px solid #CCCCCC;
     font-weight: normal;
 }
-
+body.dark-mode .widget-container {
+    background-color: #222;
+    border-color: #444;
+}
 /*Section title -widget*/
 h2.widget-option-title{
 font-weight: normal;
 color: #435B77;
 text-align: center;
+}
+
+body.dark-mode .widget-option-title {
+background-color: #222;
+    color: white;
 }
 
 /*Widget section*/
@@ -684,6 +826,13 @@ text-align: center;
     border: 1px solid #E9E9E9;
     padding: 20px;
     margin: none;
+}
+
+/*Dark mode Widget delaited*/
+body.darkmode .widget-section {
+    background-color: #555;
+    border-color: #666;
+    color: white;
 }
 
 .widget-header { 
